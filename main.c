@@ -2,18 +2,21 @@
 #include <stdlib.h>
 #include "funciones.h"
 
+
+
+
 int main()
 {
     char seguir='s';
     int opcion=0;
-    int ope1;
-    int ope2;
-    int suma;
-    int resta;
-    int mult;
-    float div;
-    int fact;
-    int acuFact;
+    float ope1;
+    float ope2;
+//    float suma;
+//    float resta;
+//    float mult;
+//    float division;
+//    float fact;
+//    float acuFact;
     char a='x';
     char b='y';
 
@@ -36,34 +39,34 @@ int main()
         {
             case 1:
                 printf("Ingrese 1er operando:");
-                scanf("%d",&ope1);
+                scanf("%f",&ope1);
                 system("cls");
                 a=(char)ope1+48;
                 break;
             case 2:
                 printf("Ingrese 2do operando:");
-                scanf("%d",&ope2);
+                scanf("%f",&ope2);
                 system("cls");
                 b=(char)ope2+48;
                 break;
             case 3:
-                suma=ope1+ope2;
+
                 printf("========================================\n");
-                printf("El resultado de la suma es: %d\n",suma);
+                printf("El resultado de la suma es: %f\n",suma(ope1,ope2));
                 printf("========================================\n");
                 break;
             case 4:
-                resta=ope1-ope2;
+
                 printf("========================================\n");
-                printf("El resultado de la resta es: %d\n",resta);
+                printf("El resultado de la resta es: %f\n",resta(ope1,ope2));
                 printf("========================================\n");
                 break;
             case 5:
                 if(ope2!=0)
                 {
-                    div=(float)ope1/ope2;
+
                     printf("========================================\n");
-                    printf("La division da: %f\n",div);
+                    printf("La division da: %f\n",division(ope1,ope2));
                     printf("========================================\n");
                 }
                 else
@@ -75,25 +78,21 @@ int main()
 
                 break;
             case 6:
-                mult=ope1*ope2;
+
                 printf("========================================\n");
-                printf("La multiplicacion es de: %d\n",mult);
+                printf("La multiplicacion es de: %f\n",mult(ope1,ope2));
                 printf("========================================\n");
                 break;
             case 7:
-                acuFact=ope1;
-                for(fact=ope1;fact>1;fact--)
-                {
-                    ope1--;
-                    acuFact=acuFact*ope1;
-                }
+
                 printf("========================================\n");
-                printf("El factorial del pimer operando es: %d\n",acuFact);
+                printf("El factorial del pimer operando es: %d\n",acuFact(ope1));
                 printf("========================================\n");
+
                 break;
             case 8:
                 printf("========================================\n");
-                printf("La suma es de %d\nLa resta es: %d\nLa multiplicacion es: %d\nLa Division es: %f\nEl factorial del 1er operando es: %d\n",suma,resta,mult,div,acuFact);
+                printf("La suma es de %f\nLa resta es: %f\nLa multiplicacion es: %f\nLa Division es: %f\nEl factorial del 1er operando es: %d\n",suma(ope1,ope2),resta(ope1,ope2),mult(ope1,ope2),division(ope1,ope2),acuFact(ope1));
                 printf("========================================\n");
                 break;
             case 9:
