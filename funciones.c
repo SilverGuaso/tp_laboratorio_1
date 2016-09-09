@@ -1,43 +1,80 @@
 
 #include "funciones.h"
+/** \brief Suma dos flotantes
+ * \param X es primer operador
+ * \param Y es segundo operador
+ * \return retorna el valor de la suma
+ */
 
-float suma(float ope1,float ope2)
+float suma(float x,float y)
 {
    float resultado;
-   resultado=ope1+ope2;
+   resultado=x+y;
    return resultado;
 }
 
-float resta(float ope1,float ope2)
+/** \brief Resta entre dos flotantes
+ *
+ * \param X es el primer parametro
+ * \param Y es el segundo parametro
+ * \return retorna el valor de la resta
+ *
+ */
+
+
+float resta(float x,float y)
 {
     float resultado;
-    resultado=ope1-ope2;
+    resultado=x-y;
     return resultado;
 }
 
-float division(float ope1, float ope2)
+/** \brief Realiza la division de dos flotantes
+ *
+ * \param X es el primer parametro
+ * \param Y es el segundo parametro
+ * \return retorna el resultado de la division
+ *
+ */
+
+float division(float x, float y)
 {
     float resultado;
-    resultado=ope1/ope2;
+    resultado=x/y;
     return resultado;
 }
 
-float mult (float ope1,float ope2)
+/** \brief Realiza la multiplicacion de dos flotantes
+ *
+ * \param X es el primer parametro
+ * \param Y es el segundo parametro
+ * \return retorna el resultado de la multiplicacion
+ *
+ */
+
+float mult (float x,float y)
 {
     float resultado;
-    resultado=ope1*ope2;
+    resultado=x*y;
     return resultado;
 }
 
-int acuFact (int ope1)
+/** \brief realiza el factorial de un entero
+ *
+ * \param con la sentencia de control for recibimos el parametro.
+ * \param mientras que sea mayor o igual a uno, este se multiplica por su antecesor.
+ * \return retorna el factorial del parametro.
+ *
+ */
+
+long int factorial (int x)
 {
-                int fact;
-                int resultado;
-                resultado=ope1;
-                for(fact=ope1;fact>1;fact--)
-                {
-                    ope1--;
-                    resultado=resultado*ope1;
-                }
-                return resultado;
+
+    long int resultado;
+    resultado=1;
+    for(x=x;x>=1;x--)
+    {
+        resultado=resultado*x;
+    }
+    return resultado;
 }
